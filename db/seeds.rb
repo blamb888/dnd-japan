@@ -17,6 +17,13 @@ puts "Cleaning up db"
 Spell.destroy_all
 puts "Db is clean"
 
+
+# Magic Items
+
+url = "https://www.dnd5eapi.co/api/magic-items"
+json = open(url).read
+objs = JSON.parse(json)
+
 # TO Create Spells. TODO Take a good look at the old project and make sure these are all
 # accessed the right way
 # 319.times do |key|
